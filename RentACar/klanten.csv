@@ -1,0 +1,61 @@
+klantnummer;Voornaam;Naam;Straat;Nummer;BusNr;Plaats;Postcode;BTW-nummer
+A-387-002;Annemie;Peeters;Aaigemstraat;5;;Antwerpen;2000;
+A-387-003;Petra;Janssens;Abrahamstraat;78;;Oostende;9341;
+A-387-004;Arne;Maes;Bomastraat;321;;Hoogstraten;2300;
+A-387-005;Peter;Jacobs;Blekersdijk;34;4;Merksplas;2543;
+A-387-006;Izago BV;Mertens;Fluweelstraat;57;;Nieuwpoort;9421;BE0453.432.454
+A-387-007;Marc;Willems;Fortlaan;43;;Charleroi;7643;
+A-387-008;Jos;Claes;Halfweg;76;;Luik;3214;
+A-387-009;Piet;Goossens;Ham;3;2;Brussel;1000;
+A-387-010;Maria;Wouters;Irisstraat;77;;Turnhout;9432;
+A-387-011;Hubert;De Smet;Jodenstraat;31;;Rijkevorsel;9021;
+A-387-012;Emma;De Jong;Hooivelden;368;;Kumtich;3300;
+A-387-013;Julia;Jansen;Kasterleesteenweg;390;3;Vechmaal;3870;
+A-387-014;Mila;De Vries;Ringlaan;371;;Drieslinter;3350;
+A-387-015;Sophie;Van Den Berg;Prinsenstraat;376;2;Sprimont;9;BE0495.55.653
+A-387-016;Olivia;Van Dijk;Kapelaniestraat;134;;Lichtervelde;8810;
+A-387-017;Yara;Bakker;Strepestraat ;211;;Lambermont;4800;
+A-387-018;Saar;Janssen;Blekersdijk;195;5;Donk;3540;
+A-387-019;Nora;Visser;Mandemakersstraat;283;;Westrozebeek;8840;
+A-387-020;Tess;Smit;Schoolstraat;489;;Walcourt;5650;BE0483.341.960
+A-387-021;Noor;Meijer;Putstraat ;189;;Sint-Truiden;3800;
+A-387-022;Milou;De Boer;Lange Elzenstraat ;420;2;Bredene;8450;
+A-387-023;Sara;Mulder;Blekersdijk;153;;Donceel;4357;
+A-387-024;Liv;De Groot;Lodewijk De Raetlaan;149;;Ciply;7024;
+A-387-025;Zoë;Peters;Booischotseweg;460;3;Jauche;1350;
+A-387-026;Evi;Vos;Rue De Fontigny;11;;Rixensart;1330;
+A-387-027;Anna;Hendriks;Rue Du Manoir;455;;Agimont;5544;
+A-387-028;Luna;Van Leeuwen;Alsembergsesteenweg;426;;Nieuwkerke;8950;
+A-387-029;Lotte;Dekker;Westdorp;455;2;Tochogne;6941;
+A-387-030;Nina;De Wit;Rue De Virton;44;;Ethe;6760;BE0428.867.211
+A-387-031;Eva;Brouwer;Touslagerstraat;241;;Zele;9240;
+A-387-032;Emily;Dijkstra;Rue Basse;142;3;Pittem;8740;
+A-387-033;Lauren;Smits;Stationsstraat;211;;Incourt;1315;
+A-387-034;Maeve;De Graaf;Schietboompleinstraat;52;;Ledegem;8880;
+A-387-035;Lina;Van Der Meer;Kapelaniestraat;298;;Leuze;5310;
+A-387-036;Elin;Van Der Linden;Lanmbrechtstraat;315;;Wemmel;1780;
+A-387-037;Noah;De Cock;Passiewijk;23;1;Neupré;4120;
+A-387-038;Liam;Jacobs;Molenstraat;420;;Sombreffe;5140;
+A-387-039;Luca;De Haan;Westdorp;406;;Tisselt;2830;BE0465.842.425
+A-387-040;Lucas;Vermeulen;Lodorp;17;4;Macon;6591;
+A-387-041;Mees;Van Den Heuvel;Witbakkerstraat;415;;Sint-Eloois-Vijve;8793;
+A-387-042;Finn;Van Der Steen;Ramselsesteenweg;400;;Lieferinge;9400;
+A-387-043;James;De Bruin;Populierenstraat;126;;Aarsele;8700;
+A-387-044;Milan;Schouten;Industriestraat;17;;Deinze;9800;
+A-387-045;Levi;Van Beek;Place Léopold;105;;Herne;1540;
+A-387-046;Sem;Willems;Westdorp;115;;Tillet;6680;
+A-387-047;Daan;Van Vliet;Kortrijksteenweg;13;;Tielt;8750;
+A-387-048;Noud;Scholliers;Grote Beemd;38;;Schilde;2970;
+A-387-049;Luuk;De Mol;Noordhoekstraat;1;;Veurne;8630;
+A-387-050;Adam;De Kinder;Apostelblokweg;6;;Holsbeek;3220;BE0484.786.648
+A-387-051;Sam;Van Den Driesche;Terheidelaan;61;;Rotselaar;3110;
+A-387-052;Bram;Maas;Pompeloerestraat;36;1;Sint-katelijneWaver;2860;
+A-387-053;Zayn;Verheyden;Bikschotestraat;44;;Ieper;8920;
+A-387-054;Masom;De Blom;Pontweg;50;;Lokeren;9160;
+A-387-055;Benjamin;Van Veen;Sportstraat;17;;Gent;9000;
+A-387-056;Boaz;Specter;Grote Molstenstraat;14;;Tielt;8710;
+A-387-057;Siem;De Ruiter;Kempestraat;16;;Deinze;9800;
+A-387-058;Guus;De Vos;Tierstraat;41;;Diepenbeek;3590;
+A-387-059;Morris;Bosch;Reintjesbeek;25;;Brasschaat;2930;
+A-387-060;Olivier;Timmermans;Gemeenteplein;10;;Sint-Truiden;3806;
+A-387-061;Thomas;Van Doorn;Belseledorp;165;;Sint-Niklaas;9111;
