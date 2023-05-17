@@ -1,4 +1,4 @@
-﻿namespace StartUp {
+﻿namespace RentACar.UI {
     public class Class1 {
 
     }
