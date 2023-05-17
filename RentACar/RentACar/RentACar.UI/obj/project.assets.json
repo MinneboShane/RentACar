@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.UI\\RentACar.UI.csproj",
+      "projectUniqueName": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.UI\\RentACar.UI.csproj",
       "projectName": "RentACar.UI",
-      "projectPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.UI\\RentACar.UI.csproj",
+      "projectPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.UI\\RentACar.UI.csproj",
       "packagesPath": "C:\\Users\\minne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.UI\\obj\\",
+      "outputPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\minne\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj": {}
+    "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj": {
+    "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj",
+        "projectUniqueName": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj",
         "projectName": "RentACar.DL",
-        "projectPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj",
+        "projectPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.DL\\RentACar.DL.csproj",
         "packagesPath": "C:\\Users\\minne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar.DL\\obj\\",
+        "outputPath": "C:\\Users\\minne\\RentACar\\RentACar\\RentACar\\RentACar.DL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\minne\\AppData\\Roaming\\NuGet\\NuGet.Config",
