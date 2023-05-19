@@ -14,5 +14,11 @@
         public Plaats? Startplaats { get; set; }
         public Plaats? Aankomsplaats { get; set; }
 
+
+
+        public bool HeeftKlant( Klant klant ) {
+
+        }
+
     }
 }

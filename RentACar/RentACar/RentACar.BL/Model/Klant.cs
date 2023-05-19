@@ -10,15 +10,21 @@ namespace RentACar.BL.Model {
             if ( btwNummer != null )
                 ZetBtwNummer( btwNummer );
         }
-        public Klant( string klantNummer , string voornaam , string naam , Adres adres , string? btwNummer ) : this( voornaam , naam , adres , btwNummer ) {
-            KlantNummer = klantNummer;
+        internal Klant( string klantnummer , string voornaam , string naam , Adres adres , string? btwNummer ) : this( voornaam , naam , adres , btwNummer ) {
+            ZetKlantnummer( klantnummer );
         }
 
-        public string KlantNummer { get; set; }
+        public string Klantnummer { get; set; }
         public string Voornaam { get; set; }
         public string Naam { get; set; }
         public Adres Adres { get; set; }
         public string BtwNummer { get; set; }
+
+        public void ZetKlantnummer( string klantnummer ) {
+            if ( string.IsNullOrEmpty( klantnummer ) )
+                throw new KlantException( "ZetKlantnummer - is null" );
+            Klantnummer = klantnummer.Trim();
+        }
 
         public void ZetVoornaam( string voornaam ) {
             if ( string.IsNullOrWhiteSpace( voornaam ) )
@@ -43,5 +49,19 @@ namespace RentACar.BL.Model {
                 throw new KlantException( "ZetBtwNummer - is null" );
             BtwNummer = btwNummer.Trim();
         }
+
+        public void MaakReservatie() {
+
+        }
+
+        public void WijzigReservatie() {
+
+        }
+
+        public void VerwijderReservatie() {
+
+        }
+
+
     }
 }
