@@ -1,19 +1,25 @@
-﻿namespace RentACar.BL.Model {
+﻿using RentACar.BL.Exceptions;
+
+namespace RentACar.BL.Model {
     public class Adres {
 
-        public Adres( string straatNaam , int huisNummer , int? busNummer , string plaats , string postcode ) {
-            StraatNaam = straatNaam;
-            HuisNummer = huisNummer;
-            BusNummer = busNummer;
+        public Adres( string straatnaam , int huisnummer , int? busnummer , string plaats , string postcode ) {
+            Straatnaam = straatnaam;
+            Huisnummer = huisnummer;
+            Busnummer = busnummer;
             Plaats = plaats;
             Postcode = postcode;
         }
 
-        public string StraatNaam { get; set; }
-        public int HuisNummer { get; set; }
-        public int? BusNummer { get; set; }
+        public string Straatnaam { get; set; }
+        public int Huisnummer { get; set; }
+        public int? Busnummer { get; set; }
         public string Plaats { get; set; }
         public string Postcode { get; set; }
 
+        public void ZetStraatnaam( string straatnaam ) {
+            if ( string.IsNullOrWhiteSpace( Straatnaam ) )
+                throw new AdresException( "ZetStraatnaam)" );
+        }
     }
 }

@@ -19,6 +19,11 @@ namespace RentACar.BL.Model {
         public string Naam { get; set; }
         public Adres Adres { get; set; }
         public string BtwNummer { get; set; }
+        private List<Reservatie> _reservaties = new List<Reservatie>();
+
+        public IReadOnlyList<Reservatie> Reservaties() {
+            return _reservaties.AsReadOnly();
+        }
 
         public void ZetKlantnummer( string klantnummer ) {
             if ( string.IsNullOrEmpty( klantnummer ) )
@@ -50,18 +55,12 @@ namespace RentACar.BL.Model {
             BtwNummer = btwNummer.Trim();
         }
 
-        public void MaakReservatie() {
-
+        internal void VerwijderKlant( Reservatie reservatie ) {
+            throw new NotImplementedException();
         }
 
-        public void WijzigReservatie() {
-
+        internal bool HeeftReservatie( Reservatie reservatie ) {
+            return _reservaties.Contains( reservatie );
         }
-
-        public void VerwijderReservatie() {
-
-        }
-
-
     }
 }

@@ -1,9 +1,5 @@
 ﻿namespace RentACar.BL.Model {
-    internal enum Plaats {
-        Gent,
-        Antwerpen,
-        Brussel,
-        Hasselt,
-        Charleroi
+    public class Plaats {
+
     }
 }
