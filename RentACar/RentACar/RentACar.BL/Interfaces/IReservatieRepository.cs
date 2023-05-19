@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RentACar.BL.Model;
 
 namespace RentACar.BL.Interfaces {
-    internal interface IReservatieRepository {
+    public interface IReservatieRepository {
+
+        void SchrijfReservatieInDB( Reservatie reservatie );
+        bool BestaatReservatie( Reservatie reservatie );
+        bool BestaatReservatie( int reservatienummer );
+        Reservatie SelecteerReservatie( Wagen wagen );
+        IReadOnlyList<Reservatie> SelecteerReservaties( int nummer );
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RentACar.BL.Model;
 
 namespace RentACar.BL.Interfaces {
-    internal interface IAdresRepository {
+    public interface IAdresRepository {
+
+        void SchrijfAdresInDB( Adres adres );
+        bool BestaatAdres( Adres adres );
+        Adres SelecteerAdres( Adres adres );
+        IReadOnlyList<Adres> SelecteerAdressen( Adres adres );
     }
 }

@@ -55,12 +55,12 @@ namespace RentACar.BL.Model {
             BtwNummer = btwNummer.Trim();
         }
 
-        internal void VerwijderKlant( Reservatie reservatie ) {
-            throw new NotImplementedException();
-        }
-
         internal bool HeeftReservatie( Reservatie reservatie ) {
             return _reservaties.Contains( reservatie );
+        }
+
+        internal void VerwijderKlant( Reservatie reservatie ) {
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,7 +12,7 @@
         public string Voornaam { get; set; }
         public string Naam { get; set; }
         public string Adres { get; set; }
-        public string BtwNummer { get; set; }
+        public string? BtwNummer { get; set; }
 
         public override string? ToString() {
             return $"{KlantNummer}, {Voornaam}, {Naam}, {Adres}, {BtwNummer}";

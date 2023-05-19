@@ -1,5 +1,4 @@
 ﻿namespace RentACar.BL.Managers {
-    internal class ReservatieManager {
-
+    public class ArrangementManager {
     }
 }
