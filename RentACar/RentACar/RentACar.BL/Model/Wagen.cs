@@ -3,15 +3,17 @@
 namespace RentACar.BL.Model {
     public class Wagen {
 
-        public Wagen( string merk , string type , string bouwjaar ) {
-            Merk = merk;
-            Type = type;
-            Bouwjaar = bouwjaar;
+        public Wagen( string merk , string model , string bouwjaar , bool isBeschikbaar ) {
+            ZetMerk( merk );
+            ZetModel( model );
+            ZetBouwjaar( bouwjaar );
+            ZetBeschikbaarheid( isBeschikbaar );
         }
 
         public string Merk { get; set; }
-        public string Type { get; set; }
+        public string Model { get; set; }
         public string Bouwjaar { get; set; }
+        public bool IsBeschikbaar { get; set; }
 
         public void ZetMerk( string merk ) {
             if ( string.IsNullOrWhiteSpace( merk ) )
@@ -19,15 +21,22 @@ namespace RentACar.BL.Model {
             Merk = merk;
         }
 
-        public void ZetType( string type ) {
-            if ( string.IsNullOrWhiteSpace( type ) )
-                throw new WagenException( "ZetMerk" );
-            Type = type;
+        public void ZetModel( string model ) {
+            if ( string.IsNullOrWhiteSpace( model ) )
+                throw new WagenException( "ZetModel" );
+            Model = model;
         }
 
         public void ZetBouwjaar( string bouwjaar ) {
             if ( string.IsNullOrWhiteSpace( bouwjaar ) )
                 throw new WagenException( "ZetBouwjaar" );
+            Bouwjaar = bouwjaar;
+        }
+
+        public void ZetBeschikbaarheid( bool isBeschikbaar ) {
+            if ( !isBeschikbaar )
+                throw new WagenException( "ZetBeschikbaarheid" );
+            IsBeschikbaar = isBeschikbaar;
         }
     }
 }

@@ -3,23 +3,34 @@
 namespace RentACar.BL.Model {
     public class Klant {
 
-        internal Klant( string voornaam , string naam , Adres adres , string? btwNummer ) {
+        public Klant( string klantnummer , string voornaam , string naam , string straat , int huisnummer , int? busnummer , string gemeente , string postcode , string btwNummer ) {
+            ZetKlantnummer( klantnummer );
             ZetVoornaam( voornaam );
             ZetNaam( naam );
-            ZetAdres( adres );
+            ZetStraat( straat );
+            ZetHuisnummer( huisnummer );
+            if ( busnummer != null )
+                ZetBusnummer( busnummer );
+            ZetGemeente( gemeente );
+            ZetPostcode( postcode );
             if ( btwNummer != null )
                 ZetBtwNummer( btwNummer );
-        }
-        internal Klant( string klantnummer , string voornaam , string naam , Adres adres , string? btwNummer ) : this( voornaam , naam , adres , btwNummer ) {
-            ZetKlantnummer( klantnummer );
         }
 
         public string Klantnummer { get; set; }
         public string Voornaam { get; set; }
         public string Naam { get; set; }
-        public Adres Adres { get; set; }
+        public string Straat { get; set; }
+        public int Huisnummer { get; set; }
+        public int? Busnummer { get; set; }
+        public string Gemeente { get; set; }
+        public string Postcode { get; set; }
         public string BtwNummer { get; set; }
         private List<Reservatie> _reservaties = new List<Reservatie>();
+
+
+
+        public bool HeeftReservatie { get; set; }
 
         public IReadOnlyList<Reservatie> Reservaties() {
             return _reservaties.AsReadOnly();
@@ -43,10 +54,34 @@ namespace RentACar.BL.Model {
             Naam = naam.Trim();
         }
 
-        public void ZetAdres( Adres adres ) {
-            if ( adres == null )
-                throw new KlantException( "ZetAdres - is null" );
-            Adres = adres;
+        public void ZetStraat( string straat ) {
+            if ( string.IsNullOrWhiteSpace( straat ) )
+                throw new KlantException( "ZetStraat - is null" );
+            Straat = straat.Trim();
+        }
+
+        public void ZetHuisnummer( int nummer ) {
+            if ( nummer <= 0 )
+                throw new KlantException( "ZetHuisnummer" );
+            Huisnummer = nummer;
+        }
+
+        public void ZetBusnummer( int? busnummer ) {
+            if ( !busnummer.HasValue && busnummer <= 0 )
+                throw new KlantException( "ZetBusnummer" );
+            Busnummer = busnummer;
+        }
+
+        public void ZetGemeente( string gemeente ) {
+            if ( string.IsNullOrWhiteSpace( gemeente ) )
+                throw new KlantException( "ZetGemeente" );
+            Gemeente = gemeente.Trim();
+        }
+
+        public void ZetPostcode( string postcode ) {
+            if ( string.IsNullOrWhiteSpace( postcode ) )
+                throw new KlantException( "ZetPostcode" );
+            Postcode = postcode.Trim();
         }
 
         public void ZetBtwNummer( string? btwNummer ) {
@@ -55,12 +90,5 @@ namespace RentACar.BL.Model {
             BtwNummer = btwNummer.Trim();
         }
 
-        internal bool HeeftReservatie( Reservatie reservatie ) {
-            return _reservaties.Contains( reservatie );
-        }
-
-        internal void VerwijderKlant( Reservatie reservatie ) {
-            throw new NotImplementedException();
-        }
     }
 }

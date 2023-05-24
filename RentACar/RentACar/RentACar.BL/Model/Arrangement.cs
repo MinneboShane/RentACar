@@ -7,7 +7,6 @@ namespace RentACar.BL.Model {
             ZetAantalUren( aantalUren );
             ZetPrijs( prijs );
             ZetIsVasteDuur( isVasteduur );
-            ZetSubtotaal();
         }
 
         public string Type { get; set; }
@@ -46,16 +45,10 @@ namespace RentACar.BL.Model {
                 IsVasteDuur = false;
         }
 
-        public void ZetSubtotaal() {
-
-            decimal subtotaal;
-
-            if ( IsVasteDuur.Value ) { // Nightlife of Wedding
-                subtotaal = Prijs.Value;
-            } else {
-                subtotaal = ( ( decimal ) ( Prijs * AantalUur ) );
-            }
-
+        public void ZetSubtotaal( decimal subtotaal ) {
+            if ( subtotaal <= 0 )
+                throw new ArrangementException( "ZetSubtotaal" );
+            Subtotaal = subtotaal;
         }
     }
 }

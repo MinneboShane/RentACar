@@ -4,9 +4,9 @@ namespace RentACar.BL.Model {
     public class Reservatie {
         System.Globalization.CultureInfo nlBe = new System.Globalization.CultureInfo( "nl-BE" );
 
-        public Reservatie( int reservatienummer , DateTime datumReservering , Klant klant , DateTime startDatum , double aantalUren , decimal eenheidsPrijs , List<Wagen> wagens , List<Arrangement> arrangementen , Plaats startplaats , Plaats aankomsplaats ) {
+        public Reservatie( int reservatienummer , DateTime datumReservering , Klant klant , DateTime startDatum , double aantalUren , decimal eenheidsPrijs , List<Wagen> wagens , List<Arrangement> arrangementen , Plaats startplaats , Plaats aankomsplaats , decimal subtotaalExBtw , decimal subtotaalInBtw , decimal totaalExBtw , decimal totaalInBtw ) {
             ZetReservatienummer( reservatienummer );
-            ZetDatumReservering( datumReservering );
+            ZetDatumReservering();
             ZetKlant( klant );
             ZetStartDatum( startDatum );
             ZetAantalUren( aantalUren );
@@ -15,6 +15,10 @@ namespace RentACar.BL.Model {
             ZetArrangementen( arrangementen );
             ZetStartplaats( startplaats );
             ZetAankomstplaats( aankomsplaats );
+            ZetSubtotaalExBtw( subtotaalExBtw );
+            ZetSubtotaalInBtw( subtotaalInBtw );
+            ZetTotaalExBtw( totaalExBtw );
+            ZetTotaalInBtw( totaalInBtw );
         }
 
         public int Reservatienummer { get; set; }
@@ -27,6 +31,10 @@ namespace RentACar.BL.Model {
         public List<Arrangement> Arrangementen { get; set; }
         public Plaats Startplaats { get; set; }
         public Plaats Aankomsplaats { get; set; }
+        public decimal SubtotaalExBtw { get; set; }
+        public decimal SubtotaalInBtw { get; set; }
+        public decimal TotaalExBtw { get; set; }
+        public decimal TotaalInBtw { get; set; }
 
 
         public void ZetReservatienummer( int nummer ) {
@@ -35,17 +43,8 @@ namespace RentACar.BL.Model {
             Reservatienummer = nummer;
         }
 
-        public void ZetDatumReservering( DateTime datum ) {
-            if ( datum == DateTime.MinValue )
-                throw new ReservatieException( "ZetDatumReservatie" );
-
-            DateTime moment;
-            bool gelukt = DateTime.TryParseExact( datum.ToString() , "dd/MM/yyyy hh:mm" , nlBe , System.Globalization.DateTimeStyles.None , out moment );
-
-            if ( !gelukt ) {
-                throw new ReservatieException( "ZetDatumReservatie - parcen niet gelukt" );
-            }
-            DatumReservering = datum;
+        public void ZetDatumReservering() {
+            DatumReservering = DateTime.Now;
         }
 
         public void ZetKlant( Klant klant ) {
@@ -54,12 +53,12 @@ namespace RentACar.BL.Model {
             if ( Klant == klant )
                 throw new ReservatieException( "ZetKlant - zelfde klant" );
             if ( Klant != null ) {
-                if ( Klant.HeeftReservatie( this ) )
-                    Klant.VerwijderKlant( this );
+                if ( Klant.HeeftReservatie )
+                    throw new ReservatieException( "ZetKlant - klant heeft al een reservatie" );
+                else
+                    Klant = klant;
             }
-            if ( !klant.HeeftReservatie( this ) ) {
-                Klant = klant;
-            }
+
 
         }
 
@@ -110,6 +109,30 @@ namespace RentACar.BL.Model {
             if ( wagens.Count == 0 )
                 throw new ReservatieException( "ZetWagens" );
             Wagens = wagens;
+        }
+
+        public void ZetSubtotaalExBtw( decimal subExBtw ) {
+            if ( subExBtw <= 0 )
+                throw new ReservatieException( "ZetSubtotaalExBtw" );
+            SubtotaalExBtw = subExBtw;
+        }
+
+        public void ZetSubtotaalInBtw( decimal subInBtw ) {
+            if ( subInBtw <= 0 )
+                throw new ReservatieException( "ZetSubtotaalInBtw" );
+            SubtotaalInBtw = subInBtw;
+        }
+
+        public void ZetTotaalExBtw( decimal totExBtw ) {
+            if ( totExBtw <= 0 )
+                throw new ReservatieException( "ZetTotaalExBtw" );
+            TotaalExBtw = totExBtw;
+        }
+
+        public void ZetTotaalInBtw( decimal totInBtw ) {
+            if ( totInBtw <= 0 )
+                throw new ReservatieException( "ZetTotaalInBtw" );
+            TotaalInBtw = totInBtw;
         }
 
     }
