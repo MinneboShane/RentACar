@@ -6,12 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="SQL\Klanten.sql" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="SQL\Klanten.sql" />
-  </ItemGroup>
-
 </Project>
